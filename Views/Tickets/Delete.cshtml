@@ -1,0 +1,57 @@
+﻿@model HelpDeskWeb.Models.Ticket
+
+@{
+    ViewData["Title"] = "Müraciəti sil";
+}
+
+<div class="container mt-4">
+
+    <h2>Müraciəti silmək</h2>
+
+    <div class="alert alert-warning">
+        Bu müraciəti silmək istədiyinizə əminsiniz?
+    </div>
+
+    <div class="card p-4">
+
+        <h4>@Model.Title</h4>
+
+        <hr />
+
+        <p>
+            <strong>Təsvir:</strong>
+            @Model.Description
+        </p>
+
+        <p>
+            <strong>Kateqoriya:</strong>
+            @Model.Category
+        </p>
+
+        <p>
+            <strong>Prioritet:</strong>
+            @Model.Priority
+        </p>
+
+        <p>
+            <strong>Status:</strong>
+            @Model.Status
+        </p>
+
+        <form asp-action="Delete"
+              asp-route-id="@Model.Id"
+              method="post">
+
+            <button type="submit" class="btn btn-danger">
+                Bəli, sil
+            </button>
+
+            <a asp-action="Index" class="btn btn-secondary">
+                Xeyr
+            </a>
+
+        </form>
+
+    </div>
+
+</div>

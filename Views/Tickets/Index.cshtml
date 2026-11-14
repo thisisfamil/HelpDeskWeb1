@@ -1,0 +1,70 @@
+﻿@model IEnumerable<HelpDeskWeb.Models.Ticket>
+
+@{
+    ViewData["Title"] = "Müraciətlər";
+}
+
+<div class="container mt-4">
+
+    <h2>Texniki dəstək müraciətləri</h2>
+
+    <a asp-action="Create" class="btn btn-primary mb-3">
+        Yeni müraciət yarat
+    </a>
+
+    <table class="table table-bordered table-striped">
+
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Başlıq</th>
+                <th>Kateqoriya</th>
+                <th>Prioritet</th>
+                <th>Status</th>
+                <th>Əməliyyatlar</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Title</td>
+                    <td>@item.Category</td>
+                    <td>@item.Priority</td>
+                    <td>@item.Status</td>
+
+                    <td>
+                        <a asp-action="Details"
+                           asp-route-id="@item.Id"
+                           class="btn btn-info btn-sm">
+                            Ətraflı
+                        </a>
+
+                        <a asp-action="Edit"
+                           asp-route-id="@item.Id"
+                           class="btn btn-warning btn-sm">
+                            Redaktə
+                        </a>
+
+                        <a asp-action="Delete"
+                           asp-route-id="@item.Id"
+                           class="btn btn-danger btn-sm">
+                            Sil
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+
+    @if (!Model.Any())
+    {
+        <p class="alert alert-info">
+            Hələ müraciət yaradılmayıb.
+        </p>
+    }
+
+</div>

@@ -1,0 +1,32 @@
+
+body {
+    background-color: #f4f6f9;
+    font-family: Arial, sans-serif;
+}
+
+h1,
+h2 {
+    color: #243b53;
+}
+
+.container {
+    margin-bottom: 40px;
+}
+
+.card {
+    border-radius: 10px;
+    border: none;
+}
+
+.table {
+    background-color: white;
+}
+
+.btn {
+    border-radius: 6px;
+}
+
+.form-control,
+.form-select {
+    border-radius: 6px;
+}

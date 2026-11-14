@@ -1,0 +1,52 @@
+﻿@model HelpDeskWeb.Models.Ticket
+
+@{
+    ViewData["Title"] = "Müraciətin detalları";
+}
+
+<div class="container mt-4">
+
+    <h2>Müraciətin detalları</h2>
+
+    <div class="card p-4">
+
+        <h4>@Model.Title</h4>
+
+        <hr />
+
+        <p>
+            <strong>ID:</strong> @Model.Id
+        </p>
+
+        <p>
+            <strong>Təsvir:</strong>
+            @Model.Description
+        </p>
+
+        <p>
+            <strong>Kateqoriya:</strong>
+            @Model.Category
+        </p>
+
+        <p>
+            <strong>Prioritet:</strong>
+            @Model.Priority
+        </p>
+
+        <p>
+            <strong>Status:</strong>
+            @Model.Status
+        </p>
+
+        <p>
+            <strong>Tarix:</strong>
+            @Model.CreatedAt.ToString("dd.MM.yyyy HH:mm")
+        </p>
+
+        <a asp-action="Index" class="btn btn-secondary">
+            Geri
+        </a>
+
+    </div>
+
+</div>

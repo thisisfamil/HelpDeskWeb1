@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Ana səhifə";
+}
+
+<div class="container mt-5">
+
+    <div class="p-5 mb-4 bg-light rounded-3">
+
+        <h1>IT Help Desk</h1>
+
+        <p class="lead">
+            Universitetin texniki dəstək müraciətlərinin
+            idarə edilməsi sistemi.
+        </p>
+
+        <p>
+            Texniki probleminiz varsa, yeni müraciət yaradın.
+        </p>
+
+        <a asp-controller="Tickets"
+           asp-action="Create"
+           class="btn btn-primary btn-lg">
+            Yeni müraciət yarat
+        </a>
+
+        <a asp-controller="Tickets"
+           asp-action="Index"
+           class="btn btn-outline-dark btn-lg">
+            Müraciətlərə bax
+        </a>
+
+    </div>
+
+</div>

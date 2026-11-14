@@ -1,0 +1,83 @@
+﻿@model HelpDeskWeb.Models.Ticket
+
+@{
+    ViewData["Title"] = "Yeni müraciət";
+}
+
+<div class="container mt-4">
+
+    <h2>Yeni texniki dəstək müraciəti</h2>
+
+    <form asp-action="Create" method="post">
+
+        <div class="mb-3">
+            <label asp-for="Title" class="form-label">
+                Müraciətin başlığı
+            </label>
+
+            <input asp-for="Title" class="form-control" />
+
+            <span asp-validation-for="Title"
+                  class="text-danger">
+            </span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Description" class="form-label">
+                Problemin təsviri
+            </label>
+
+            <textarea asp-for="Description"
+                      class="form-control"
+                      rows="4"></textarea>
+
+            <span asp-validation-for="Description"
+                  class="text-danger">
+            </span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Category" class="form-label">
+                Kateqoriya
+            </label>
+
+            <select asp-for="Category" class="form-select">
+                <option value="">Seçin</option>
+                <option value="Computer">Kompüter</option>
+                <option value="Internet">İnternet</option>
+                <option value="Printer">Printer</option>
+                <option value="Software">Proqram təminatı</option>
+            </select>
+
+            <span asp-validation-for="Category"
+                  class="text-danger">
+            </span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Priority" class="form-label">
+                Prioritet
+            </label>
+
+            <select asp-for="Priority" class="form-select">
+                <option value="Low">Aşağı</option>
+                <option value="Normal">Normal</option>
+                <option value="High">Yüksək</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-success">
+            Göndər
+        </button>
+
+        <a asp-action="Index" class="btn btn-secondary">
+            Geri
+        </a>
+
+    </form>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

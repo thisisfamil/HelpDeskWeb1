@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36915.13 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpDeskWeb", "HelpDeskWeb.csproj", "{A71194FE-D212-4FB5-BB23-1E5C09047BBC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A71194FE-D212-4FB5-BB23-1E5C09047BBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A71194FE-D212-4FB5-BB23-1E5C09047BBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A71194FE-D212-4FB5-BB23-1E5C09047BBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A71194FE-D212-4FB5-BB23-1E5C09047BBC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7C31187B-6FDF-4A5A-A8D5-6D3635860EDD}
+	EndGlobalSection
+EndGlobal
